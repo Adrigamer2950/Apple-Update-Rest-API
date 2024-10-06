@@ -22,7 +22,7 @@ async function getLatest(req: Express.Request, res: Express.Response, os: OS) {
 const app = new Express()
 
 .get("/*", (req, res) => {
-    res.redirect("https://github.com/Adrigamer2950/Apple-Update-Rest-API", 301);
+    res.redirect(301, "https://github.com/Adrigamer2950/Apple-Update-Rest-API");
 })
 .get("/latest/ios", async (req, res) => {
     await getLatest(req, res, OS.ios);
